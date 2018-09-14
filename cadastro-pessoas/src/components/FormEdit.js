@@ -1,6 +1,12 @@
 import React from 'react';
 
-export default class FormCad extends React.Component{
+export default class FormEdit extends React.Component{
+    constructor(props){
+        super(props);
+        const dados = this.props.getPessoa(this.props.id);
+        this.props.importarPessoa(dados.pessoa);
+        
+    };
     render(){
         return(
             <div className='form'>
@@ -57,7 +63,7 @@ export default class FormCad extends React.Component{
                         name="bairro"
                         type="text"
                         value={this.props.pessoa.bairro}
-                        onChange={this.props.handlerChangePessoa} 
+                        onChange={this.props.handlerChangePessoa}  
                     />
                 </label>
                 <label>Cidade:
@@ -73,10 +79,10 @@ export default class FormCad extends React.Component{
                         name="estado"
                         type="text"
                         value={this.props.pessoa.estado}
-                        onChange={this.props.handlerChangePessoa} 
+                        onChange={this.props.handlerChangePessoa}  
                     />
                 </label>
-                <button className='button' onClick={ this.props.cadastrarPessoa }>Enviar</button>
+                <button className='button' onClick={ this.props.atualizarPessoa }>Atualizar</button>
             </div>
         );
     };

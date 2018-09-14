@@ -36,6 +36,7 @@
 }
 .view{
     width: 500px; 
+    padding: 15px;
     background: #E5E5E5;
 }
 .view h2{
@@ -43,6 +44,20 @@
 }
 .form{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between
+    flex-direction: column;
+    align-items: flex-start;
+}
+.button{
+    margin:10px 5px 0;
+    padding: 5px;
+    background: #CBCBCB;
+    border: 1px solid #000;
+    color: #000;
+    text-decoration: none;
+}
+.button:hover, .lista a:hover{
+    background: #777;
+}
+.form label{
+    margin: 5px 0;
 }

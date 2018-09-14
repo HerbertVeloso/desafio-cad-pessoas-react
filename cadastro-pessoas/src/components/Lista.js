@@ -7,9 +7,7 @@ export default class Lista extends React.Component{
             <aside className='lista'>
                 {this.props.listaDePessoas.map(
                     item => {
-                        console.log(item.pessoa);
-                        const ir = '/info/' + item.id;
-                        return  <Link to={ir} key={item.id}>{ item.pessoa.nome }</Link>;
+                        return  <Link to={`/info/${item.pessoa.id}`} key={item.pessoa.id}>{ item.pessoa.nome }</Link>;
                     }
                 )}
             </aside>
